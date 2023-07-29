@@ -1,0 +1,26 @@
+src/aligned_malloc.c:69:2: error: Memory leak: base_ptr [memleak]
+ } // else NULL, invalid arguments
+ ^
+src/malloc_freelist.c:100:6: style: Condition 'last_block' is always false [knownConditionTrueFalse]
+  if(last_block)
+     ^
+src/malloc_freelist.c:95:29: note: Assignment 'last_block=NULL', assigned value is 0
+ alloc_node_t* last_block = NULL;
+                            ^
+src/malloc_freelist.c:100:6: note: Condition 'last_block' is always false
+  if(last_block)
+     ^
+src/malloc_freelist.c:146:7: warning:inconclusive: Possible null pointer dereference: found_block [nullPointer]
+   if(found_block->size >= size)
+      ^
+src/malloc_freelist.c:134:30: note: Assignment 'found_block=NULL', assigned value is 0
+ alloc_node_t* found_block = NULL;
+                             ^
+src/malloc_freelist.c:146:7: note: Null pointer dereference
+   if(found_block->size >= size)
+      ^
+src/malloc_addblock_init_assert.c:18:0: style: The function 'malloc_init' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
